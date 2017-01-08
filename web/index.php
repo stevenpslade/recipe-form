@@ -24,7 +24,7 @@ $app->register(new Herrera\Pdo\PdoServiceProvider(),
                )
 );
 
-// Our web handlers
+// Our web handlers!
 
 $app->get('/', function() use($app) {
   $app['monolog']->addDebug('logging output.');
