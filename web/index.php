@@ -1,7 +1,7 @@
 <?php
 
 require('../vendor/autoload.php');
-require('/header.php');
+require('header.php');
 
 echo "test";
 
