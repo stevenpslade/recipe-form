@@ -15,5 +15,21 @@ $app->register(new Silex\Provider\MonologServiceProvider(), array(
 // // Our web handlers!
 
 // $app->run();
+?>
 
-echo "test";
+<div class="row">
+  <form class="col s12">
+    <div class="row">
+      <div class="input-field col s6">
+        <input placeholder="Placeholder" id="first_name" type="text" class="validate">
+        <label for="first_name">First Name</label>
+      </div>
+    </div>
+    <button class="btn waves-effect waves-light" type="submit" name="action">Submit
+      <i class="material-icons right">send</i>
+    </button>
+  </form>
+</div>
+
+<?php
+require('footer.php');
