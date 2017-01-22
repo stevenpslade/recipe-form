@@ -2,14 +2,20 @@ function listTemplate(listNum) {
   let html = ``;
 
   for (i = 1; i <= listNum; i++) {
+    if (listNum === "1") {
+      html += `<input type="hidden" class="validate" name="list[${i}][title]">`;
+    } else {
+      html += `
+        <h6>Title #${i}</h6>
+        <div class="row">
+          <div class="input-field col s6">
+            <input type="text" class="validate" name="list[${i}][title]">
+            <label for="list[${i}][title]">List Title</label>
+          </div>
+        </div>`;
+    }
+
     html += `
-      <h6>Title #${i}</h6>
-      <div class="row">
-        <div class="input-field col s6">
-          <input type="text" class="validate" name="list[${i}][title]">
-          <label for="list[${i}][title]">List Title</label>
-        </div>
-      </div>
       <h6>Ingredients</h6>
       <blockquote>
       Insert each item on a new line.<br/>Omit any list formats (bullets or numbers).
