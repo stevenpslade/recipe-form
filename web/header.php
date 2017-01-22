@@ -15,4 +15,5 @@
           <a href="/" class="brand-logo center">Recipe Card Builder</a>
         </div>
       </nav>
-      <div class="container">
+      <main>
+        <div class="container">

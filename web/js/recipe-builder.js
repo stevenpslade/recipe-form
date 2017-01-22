@@ -44,4 +44,10 @@ $(function() {
     $("#list-container").html(result);
   });
 
+  $("#copyRecipe").on("click", function() {
+    $("#recipeCardHtml").select();
+    document.execCommand('copy');
+    Materialize.toast('Copied Code!', 5000);
+  });
+
 });
