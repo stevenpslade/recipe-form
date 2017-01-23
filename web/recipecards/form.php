@@ -106,8 +106,10 @@ if (!empty($_POST)) {
         }
       }
 
-      $recipeCardHtml .= '</ul></div>';
+      $recipeCardHtml .= '</ul>';
     }
+
+    $recipeCardHtml .= '</div>';
 
     $recipeCardHtml .=
       '<div id="recipeFooter">
