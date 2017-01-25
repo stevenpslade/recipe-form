@@ -42,7 +42,7 @@ if (!empty($_POST)) {
     // Build recipe card HTML
     $recipeCardHtml  = '';
     $recipeCardHtml .= '<div id="printArea">';
-    $recipeCardHtml .= '<div id="recipeCard">';
+    $recipeCardHtml .= '<div id="recipeCard" style="width:100%;">';
     $recipeCardHtml .= '<h1 class="recipeTitle">' . $title . '</h1>';
 
     if (isset($display_servings)) {
