@@ -42,15 +42,16 @@ if (!empty($_POST)) {
     // Build recipe card HTML
     $recipeCardHtml  = '';
     $recipeCardHtml .= '<div id="printArea">';
-    $recipeCardHtml .= '<div id="recipeCard" style="width:100%;">';
-    $recipeCardHtml .= '<h1 class="recipeTitle">' . $title . '</h1>';
+    $recipeCardHtml .= '<meta property="og:site_name" content="nikkidinkicooking.com"/><meta property="og:author" content="Nikki Dinki"/>';
+    $recipeCardHtml .= '<div id="recipeCard" itemscope itemtype="http://schema.org/Recipe" style="width:100%;">';
+    $recipeCardHtml .= '<h1 class="recipeTitle" itemprop="name">' . $title . '</h1>';
 
     if (isset($display_servings)) {
-      $recipeCardHtml .= '<p class="recipeInfo"><em>servings:</em> ' . $serving_size . ' ' . $serving_unit . '</p>';
+      $recipeCardHtml .= '<p class="recipeInfo"><em>servings:</em> ' . $serving_size . ' <span itemprop="recipeYield">' . $serving_unit . '</span></p>';
     }
 
     $recipeCardHtml .= '<div id="recipeContainer">';
-    $recipeCardHtml .= '<img style="border: 2px solid #2c3852;" class="recipeImage" width="250" src="' . $image_url . '">';
+    $recipeCardHtml .= '<img style="border: 2px solid #2c3852;" class="recipeImage" width="250" itemprop="image" src="' . $image_url . '">';
     $recipeCardHtml .= '<img id="printButton" class="recipeImage" width="255" src="/s/print_recipe_button1.png">';
     $recipeCardHtml .= '<div style="float:right;clear:both;margin-top:1rem;" class="rw-ui-container"></div>';
 
@@ -67,7 +68,7 @@ if (!empty($_POST)) {
 
       foreach($ingredients_array as $ingredient) {
         if (strlen($ingredient) > 1) {
-          $recipeCardHtml .= '<li>' . $ingredient . '</li>';
+          $recipeCardHtml .= '<li itemprop="ingredients">' . $ingredient . '</li>';
         }
       }
 
@@ -87,7 +88,7 @@ if (!empty($_POST)) {
 
       foreach($directions_array as $direction) {
         if (strlen($direction) > 1) {
-          $recipeCardHtml .= '<li>' . $direction . '</li>';
+          $recipeCardHtml .= '<li itemprop="recipeInstructions">' . $direction . '</li>';
         }
       }
 
