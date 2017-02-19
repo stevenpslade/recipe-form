@@ -47,7 +47,7 @@ if (!empty($_POST)) {
     $recipeCardHtml .= '<h1 class="recipeTitle" itemprop="name">' . $title . '</h1>';
 
     if (isset($display_servings)) {
-      $recipeCardHtml .= '<p class="recipeInfo"><em>servings:</em> ' . $serving_size . ' <span itemprop="recipeYield">' . $serving_unit . '</span></p>';
+      $recipeCardHtml .= '<p class="recipeInfo"><em>servings:</em> <span itemprop="recipeYield">' . $serving_size . ' ' . $serving_unit . '</span></p>';
     }
 
     $recipeCardHtml .= '<div id="recipeContainer">';
