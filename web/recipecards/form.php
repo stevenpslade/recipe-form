@@ -68,7 +68,7 @@ if (!empty($_POST)) {
 
       foreach($ingredients_array as $ingredient) {
         if (strlen($ingredient) > 1) {
-          $recipeCardHtml .= '<li itemprop="ingredients">' . $ingredient . '</li>';
+          $recipeCardHtml .= '<li itemprop="recipeIngredient">' . $ingredient . '</li>';
         }
       }
 
